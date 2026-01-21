@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import RynoImage from "../../assets/Ryno.jpg";
 
 function Landing() {
   return (
@@ -10,7 +11,7 @@ function Landing() {
               Welcome to Ryno's Portfolio
             </h1>
             <img
-              src="src/assets/Ryno.jpg"
+              src={RynoImage}
               alt="Icon"
               className="w-48 md:w-64 lg:w-72 mx-auto rounded-[20px] shadow-[0_2px_4px_white] mt-4 mb-6"
             />
@@ -66,7 +67,7 @@ function Landing() {
               Hire Me
             </Link>
             <a
-              href="https://www.linkedin.com/in/ryno-erasmus-044527268/"
+              href={`${import.meta.env.BASE_URL}Ryno_CV.pdf`}
               className="min-w-26 px-5 h-14 text-center bg-[#8a0000] text-white rounded-[20px] flex items-center justify-center hover:bg-fuchsia-600"
               target="blank"
             >
