@@ -1,4 +1,3 @@
-import React from "react";
 import "./contact.scss";
 
 // Make Responsive
