@@ -54,8 +54,8 @@ function Landing() {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-2 justify-center items-center mt-10">
             <a
-              href="public/Ryno_CV.pdf"
-              target="blank"
+              href={`${import.meta.env.BASE_URL}Ryno_CV.pdf`}
+              target="_blank"
               className="min-w-26 px-5 h-14 text-center bg-[#8a0000] text-white rounded-[20px] flex items-center justify-center hover:bg-fuchsia-600"
             >
               Download CV
@@ -67,9 +67,9 @@ function Landing() {
               Hire Me
             </Link>
             <a
-              href={`${import.meta.env.BASE_URL}Ryno_CV.pdf`}
+              href="https://www.linkedin.com/in/ryno-erasmus-044527268/"
               className="min-w-26 px-5 h-14 text-center bg-[#8a0000] text-white rounded-[20px] flex items-center justify-center hover:bg-fuchsia-600"
-              target="blank"
+              target="_blank"
             >
               LinkedIn
             </a>
