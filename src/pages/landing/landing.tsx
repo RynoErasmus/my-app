@@ -25,7 +25,7 @@ function Landing() {
               <span className="text-[#8a0000] font-bold underline block mb-1 text-xl">
                 Full Name:
               </span>
-              <p className="text-lg">Ryno Erasmus pielkop van skalkwyk</p>
+              <p className="text-lg">Ryno Erasmus</p>
             </div>
 
             <div className="text-center p-2">
