@@ -1,0 +1,68 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  background-color: #8a0000;
+  height: 45.3rem;
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  height: 30rem;
+  margin-bottom: 10px;
+  background-color: #121212;
+
+  label {
+    color: white;
+    padding: 1rem 0;
+    font-size: 20px;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
+  input::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    height: 10rem;
+  }
+
+  textarea::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  button {
+    margin: 2rem;
+    width: 50%;
+    align-self: center;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+  }
+
+  button:hover {
+    background-color: green;
+    color: white;
+  }
+}

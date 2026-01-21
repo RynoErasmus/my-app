@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Orbitron";
+}
+
+body {
+  overflow-x: hidden;
+}
