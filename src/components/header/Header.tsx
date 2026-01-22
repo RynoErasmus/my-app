@@ -58,7 +58,7 @@ function Header() {
         <ul className="flex flex-col gap-2 mt-2">
           {navItems.map((item) => (
             <Link key={item.path} to={item.path} className="no-underline!">
-              <li className="bg-[#b31212] text-[clamp(0.8rem,2vw,1.25rem)] text-white min-w-20 px-4 py-2 flex items-center justify-center text-center rounded-tl-3xl rounded-tr-xl rounded-bl-xl rounded-br-2xl hover:bg-white hover:text-[#b31212] transition">
+              <li className="bg-[#b31212] text-[clamp(0.8rem,2vw,1.25rem)] text-white min-w-20 px-4 py-2 flex items-center justify-center text-center rounded-tl-3xl rounded-tr-xl rounded-bl-xl rounded-br-2xl hover:bg-white hover:text-[#b31212]! transition">
                 {item.label}
               </li>
             </Link>
