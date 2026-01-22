@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="bg-black border-b-4 border-white p-3">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl sm:text-2xl md:text-3xl text-white font-Orbitron underline">
+        <h1 className="text-xl sm:text-2xl md:text-3xl text-white font-Orbitron underline ">
           Ryno's Portfolio
         </h1>
 
@@ -42,7 +42,7 @@ function Header() {
         <ul className="hidden md:flex gap-3 md:gap-4 lg:gap-8 items-center ml-auto mt-3 pt-0.5">
           {navItems.map((item) => (
             <Link key={item.path} to={item.path} className="no-underline!">
-              <li className="bg-[#b31212] text-[clamp(0.8rem,2vw,1.25rem)] text-white min-w-20 px-4 py-2 flex items-center justify-center text-center rounded-tl-3xl rounded-tr-xl rounded-bl-xl rounded-br-2xl hover:bg-white hover:text-[#b31212] transition ">
+              <li className="bg-[#FF0000] text-[clamp(0.8rem,2vw,1.25rem)] text-white min-w-20 px-4 py-2 flex items-center justify-center text-center rounded-tl-3xl rounded-tr-xl rounded-bl-xl rounded-br-2xl hover:bg-white hover:text-[#FF0000]! hover:shadow-lg hover:shadow-[#FF0000]  transition ">
                 {item.label}
               </li>
             </Link>
