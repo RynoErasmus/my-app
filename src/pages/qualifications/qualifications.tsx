@@ -1,5 +1,8 @@
 import { useState } from "react";
 import ImageModal from "../../components/modals/imageModal";
+import NSC from "../../assets/NSC.jpg";
+import UI from "../../assets/UI.jpg";
+import UX from "../../assets/UX.jpg";
 
 function Qualifications() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -7,9 +10,9 @@ function Qualifications() {
   const [currentAltText, setCurrentAltText] = useState("");
 
   const images = [
-    { id: 1, url: "src/assets/NSC.jpg", alt: "NSC" },
-    { id: 2, url: "src/assets/UI.jpg", alt: "UI-Certificate" },
-    { id: 3, url: "src/assets/UX.jpg", alt: "UX-Certificate" },
+    { id: 1, url: NSC, alt: "NSC" },
+    { id: 2, url: UI, alt: "UI-Certificate" },
+    { id: 3, url: UX, alt: "UX-Certificate" },
   ];
 
   const openModal = (url: string, alt: string) => {
