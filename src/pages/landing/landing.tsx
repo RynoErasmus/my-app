@@ -64,7 +64,7 @@ function Landing() {
               to={"/contact"}
               className="min-w-26 px-5 h-14 text-center bg-[#FF0000] text-shadow-sm/40 text-white rounded-[20px] flex items-center justify-center hover:bg-green-600"
             >
-              Hire Me
+              Message Me
             </Link>
             <a
               href="https://www.linkedin.com/in/ryno-erasmus-044527268/"
