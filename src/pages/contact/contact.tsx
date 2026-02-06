@@ -1,32 +1,45 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import type { FormEvent } from "react";
+import toast from "react-hot-toast";
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        )
-        .then(
-          () => {
-            alert("Message Sent Successfully!");
-            form.current?.reset();
-          },
-          (error) => {
-            console.error("Failed", error.text);
-            alert("Failed to send message. Please try again.");
-          },
-        );
-    }
+    if (!form.current) return;
+    if (loading) return;
+    setLoading(true);
+
+    const toastId = toast.loading("Sending Message...");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(() => {
+        toast.success("Message Send Successfully! 🚀", {
+          id: toastId,
+        });
+        form.current?.reset();
+      })
+      .catch((error) => {
+        console.error("Email Failed", error);
+
+        toast.error("Failed to Send Message 😢", {
+          id: toastId,
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -67,15 +80,21 @@ function Contact() {
 
           <button
             type="submit"
-            value="Send"
-            className="w-full border-2 rounded-2xl hover:bg-green-600 bg-red-600 py-2 font-bold transition"
+            disabled={loading}
+            className={`w-full border-2 rounded-2xl hover:bg-green-600 bg-red-600 py-2 font-bold transition ${loading ? "bg-gray-500 cursor-not-allowed" : "bg-red-600"}`}
           >
-            Submit
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                Sending...
+              </span>
+            ) : (
+              "Submit"
+            )}
           </button>
         </form>
       </div>
     </div>
   );
 }
-
 export default Contact;
