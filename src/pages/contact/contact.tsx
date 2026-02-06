@@ -44,7 +44,7 @@ function Contact() {
           <label>Full Name:</label>
           <input
             type="text"
-            name="user_name"
+            name="name"
             placeholder="First & Last Name"
             required
             className="w-full border-2 py-2 px-3 rounded-xl bg-transparent"
